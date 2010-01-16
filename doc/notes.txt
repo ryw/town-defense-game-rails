@@ -1,0 +1,22 @@
+Nexus of Conflict: The Town Defense Game
+
+You start out alone, as level 1 "generalist"
+
+* Determine details of attack wave
+- Scout Report: Scouts alert you of some details of an incoming wave of enemies
+- Defense setup: you position heros, choose skill/tactics
+* Battle (iterates until one side is defeated)
+- Results: deaths/stats upgrade/skill acquirement
+- Recruiting: you can guide "what you're looking for" but this isn't like hiring mercenaries
+- Payment: you get paid for your hard work and effort by the town
+- Shopping: traveling merchant offers unique equipment purchase opportunities 
+- Training - designate each hero to practice something while the town "waits"
+- Training bonus received
+
+Each hero attracts "generic" henchmen of 3 types: warriors, archers, calvary. These shield him from direct damage.
+
+Henchmen that survive battles may "upgrade" to heros themselves.
+
+
+Hero's are knocked out of current battle, but will be "recruitable" in next games. 2% chance though that he will retire after a knockout.
+

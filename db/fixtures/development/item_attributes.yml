@@ -1,0 +1,159 @@
+starter_wand_offense:
+  item: starter_wand
+  name: self_offense
+  value: 1
+
+wand_offense:
+  item: wand
+  name: self_offense
+  value: 2
+
+wand_of_missiles_offense:
+  item: wand_of_missiles
+  name: self_offense
+  value: 3
+
+wand_of_destruction_offense:
+  item: wand_of_destruction
+  name: self_offense
+  value: 4
+
+spear_offense:
+  item: spear
+  name: self_offense
+  value: 2
+
+spear_of_sharpness_offense:
+  item: spear_of_sharpness
+  name: self_offense
+  value: 3
+
+golden_spear_of_striking:
+  item: golden_spear_of_striking
+  name: self_offense
+  value: 4
+
+short_sword_offense:
+  item: short_sword
+  name: self_offense
+  value: 1
+
+short_sword_of_sharpness_offense:
+  item: short_sword_of_sharpness 
+  name: self_offense
+  value: 2
+  
+worn_out_long_sword_offense:
+  item: worn_out_long_sword
+  name: self_offense
+  value: 1
+
+long_sword_offense:
+  item: long_sword
+  name: self_offense
+  value: 2
+
+long_sword_of_sharpness_offense:
+  item: long_sword_of_sharpness
+  name: self_offense
+  value: 3
+
+worn_out_great_sword_offense:
+  item: worn_out_great_sword
+  name: self_offense
+  value: 2
+
+great_sword_offense:
+  item: great_sword
+  name: self_offense
+  value: 3
+
+great_sword_of_sharpness_offense:
+  item: great_sword_of_sharpness
+  name: self_offense
+  value: 4
+
+worn_out_medium_shield_defense:
+  item: worn_out_medium_shield
+  name: self_defense 
+  value: 0
+
+medium_shield_defense:
+  item: medium_shield
+  name: self_defense 
+  value: 1
+
+premium_medium_shield_defense:
+  item: premium_medium_shield
+  name: self_defense 
+  value: 2
+
+amulet_of_animal_defense_defense:
+  item: amulet_of_animal_defense
+  name: self_defense_animal
+  value: 2
+  
+short_bow_offense:
+  item: short_bow  
+  name: self_offense
+  value: 1
+  
+long_bow_offense:
+  item: long_bow
+  name: self_offense
+  value: 2
+
+great_bow_offense:
+  item: great_bow
+  name: self_offense
+  value: 3
+  
+great_bow_of_wounding_offense:
+  item: great_bow_of_wounding
+  name: self_offense
+  value: 4
+
+golden_great_bow_of_piercing_offense:
+  item: golden_great_bow_of_piercing
+  name: self_offense
+  value: 5
+
+dart_offense:
+  item: dart
+  name: self_offense
+  value: 1
+
+throwing_axe_offense:
+  item: throwing_axe
+  name: self_offense
+  value: 2
+
+javelin_offense:
+  item: javelin
+  name: self_offense
+  value: 3
+
+javelin_of_piercing_offense:
+  item: javelin_of_piercing
+  name: self_offense
+  value: 4
+
+hatchet_offense:
+  item: hatchet
+  name: self_offense
+  value: 1
+
+double_axe_offense:
+  item: double_axe
+  name: self_offense
+  value: 2
+
+battle_axe_offense:
+  item: battle_axe
+  name: self_offense
+  value: 3
+
+silver_axe_of_striking_offense:
+  item: silver_axe_of_striking
+  name: self_offense
+  value: 4

@@ -1,0 +1,14 @@
+		<h1>Your heroes</h1>
+		<% heros.each do |h| %>
+			<%= link_to h.name, h %><br />
+			Str: <%= h.strength.to_ladder %><br />
+			Dex: <%= h.dexterity.to_ladder %><br />
+			Con: <%= h.constitution.to_ladder %><br />
+			Int: <%= h.intelligence.to_ladder %><br />
+			Rank/Experience: <%= h.rank %>/<%= h.earned_ep %><br />
+			Base Attack/Defense: <%= h.base_attack %>/<%= h.base_defense %><br />
+			Eq: <%= h.eq %><br />
+			Skills:<br />
+			<%= h.skills %><br/>
+			<br />
+		<% end %>

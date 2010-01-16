@@ -1,0 +1,11 @@
+<table cellpadding="10" border="1" cellspacing="3">
+	<tr><td>Name:</td><td><%= @creature.name %></td></tr>
+	<tr><td>Type:</td><td><%= @creature.ctype %></td></tr>
+	<tr><td>Tenacity (Morale):</td><td><%= @creature.tenacity.to_ladder %></td></tr>
+	<tr><td>Ferocity in Combat:</td><td><%= @creature.ferocity.to_ladder %></td></tr>
+	<tr><td>Number of Attacks:</td><td><%= @creature.attacks %></td></tr>
+	<tr><td>Offense:</td><td><%= @creature.offense %></td></tr>
+	<tr><td>Defense:</td><td><%= @creature.defense %></td></tr>
+	<tr><td>Gifts:</td><td><%= @creature.gifts %></td></tr>
+	<tr><td>Appearing:</td><td><%= @creature.appearing_in_words %></td></tr>
+</table>

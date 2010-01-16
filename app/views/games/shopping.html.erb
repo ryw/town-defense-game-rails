@@ -1,0 +1,59 @@
+<% content_for :next_action do %>
+	<%= button_to 'next >', next_stage_game_url(@game) %>
+<% end %>
+
+<h1>Shopping</h1>
+
+<% @game.engaged_heros.each do |h| %>
+<%= link_to h.name, shopping_game_url(:hero_id => h.id ) %>
+<% end %>
+
+<% unless @items.size.zero? -%>
+	<h2><%= @hero.name_with_title %></h2>
+
+	<table border=1 cellpadding=5>
+		<tr>
+			<td>Attributes</td>
+			<td>Strength: <%= @hero.strength.to_ladder %><br />
+				Dexterity: <%= @hero.dexterity.to_ladder %><br />
+				Constitution: <%= @hero.constitution.to_ladder %><br />
+				Intelligence: <%= @hero.intelligence.to_ladder %><br /></td>
+		</tr>
+		<tr>
+			<td>Skills</td>
+			<td><%= @hero.skills_list %></td>
+		</tr>
+		<tr>
+			<td>Equipment</td>
+			<td><%= @hero.eq %></td>
+		</tr>
+	</table>
+
+	<table id="shopping">
+	<% @items.each do |i| %>
+		<tr>
+			<td class="price"><%= i.cost %></td>
+			<td><span class="bigbold"><%= i.name %></span><br />
+			<% if i.item_attributes.count > 0 %>
+								The item has the following properties:
+								<% i.item_attributes.each do |a| -%>
+								<%= "#{a.friendly_name} #{sprintf("%+d",a.value)}." %>
+								<% end -%>
+					<% end -%>
+					<% if current_item = @hero.current_item_by_location(i.location) -%>
+								<br /><span class="smallde-emp"><%= current_item.name %> is currently equipped.
+								<% if current_item.item_attributes.count > 0 %>Properties:
+									<% current_item.item_attributes.each do |a| -%>
+									<%= a.friendly_name << " " << sprintf("%+d",a.value) << "." %>
+									<% end -%>
+								<% end -%>
+					<% end -%>
+			</td>
+			<td><%= link_to 'buy', buy_item_hero_url(:hero_id => @hero.id, 
+						:item_id => i.id ) %></td>
+		</tr>
+	<% end -%>
+	</table>
+<% else -%>
+	<p>Nothing to buy today.</p>
+<% end -%>

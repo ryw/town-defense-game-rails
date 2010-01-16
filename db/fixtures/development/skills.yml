@@ -1,0 +1,37 @@
+short_swords:
+  name: short swords
+  challenge_factor: 6
+
+long_swords:
+  name: long swords
+  dependant_skill: short_swords
+  challenge_factor: 8
+
+great_swords:
+  name: great swords
+  dependant_skill: long_swords
+  challenge_factor: 12
+
+shield:
+  name: shield block
+  challenge_factor: 7
+  
+pole_arms:
+  name: pole arms
+  challenge_factor: 13
+
+wands:
+  name: wands
+  challenge_factor: 16
+  
+archery:
+  name: archery
+  challenge_factor: 14
+  
+thrown_weapons:
+  name: thrown weapons
+  challenge_factor: 10
+  
+battle_axes:
+  name: battle axes
+  challenge_factor: 7

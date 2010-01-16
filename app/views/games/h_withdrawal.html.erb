@@ -1,0 +1,15 @@
+<% content_for :next_action do %>
+	<%= button_to 'next >', next_stage_game_url(@game) %>
+<% end %>
+
+<h1>Hero withdrawal</h1>
+
+<table cellpadding="5">
+<% @engaged_heros.each do |h| %>
+<tr>
+	<td><%= link_to h.name_with_title, h %></td>
+	<td><%= hstatus(h.hstatus)%> <%= h.energy %></td>
+	<td><%= link_to "withdraw", withdraw_hero_url(:hero_id => h.id) %></td>
+</tr>
+<% end if @engaged_heros.size > 1 %>
+</table>

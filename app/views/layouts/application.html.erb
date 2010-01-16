@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Town Defense Game</title>
+	<%= stylesheet_link_tag 'screen' %>
+	<%= javascript_include_tag :defaults %>
+</head>
+<body>
+<div id="header">
+	<% if session[:game] %>
+		<div id="game">
+  		game: <b><%=h @game.name %></b> | 
+  		round: <b><%=h @game.round %></b> |
+  		gold: <b><%=h @game.gold %></b> |
+			stage: <b><%=h Game::STAGES[@game.stage] %></b> |
+			<%= link_to 'quit', @game, :confirm => 'Are you sure?', :method => :delete %>
+		</div>
+	<% end %>	
+
+	town defense game
+	<% if logged_in? %>
+		| logged in as <%= User.find(current_user).login %> | <%= link_to 'logout', logout_url %>
+	<% end %>
+</div>
+
+<%= yield :next_action %>
+
+<div id="content">		
+	<% if flash[:notice] %>
+		<div id="flash-notice"><%= flash[:notice] %></div>
+	<% end %>
+	<% if flash[:error] %>
+		<div id="flash-error"><%= flash[:error] %></div>
+	<% end %>
+	
+	<%= yield %>
+</div>
+
+<% if session[:game] %>
+	<div id="heros">
+		<h1>Engaged Heros</h1>
+		<% @game.engaged_heros.each do |h| %>
+			<div class="hero">
+				<%= link_to h.name_with_title, h %> 
+				<span class="small de-emp"><%= hstatus(h.hstatus)%> <%= h.energy %></span><br />
+				<span class="small de-emp">rank</span><%= h.rank %>
+				<span class="small de-emp">xp</span><%= h.earned_ep %>
+				<span class="small de-emp">atk</span><%= sprintf("%+d",h.offense_mod) %>
+				<span class="small de-emp">def</span><%= sprintf("%+d",h.defense_mod) %>
+			</div>
+		<% end %>
+		<br clear="all" />
+
+		<h1>Observing Heros</h1>
+		<% @game.observing_heros.each do |h| %>
+			<div class="hero">
+				<%= link_to h.name_with_title, h %> 
+				<span class="small de-emp"><%= hstatus(h.hstatus)%> <%= h.energy %></span><br />
+				<span class="small de-emp">rank</span><%= h.rank %>
+				<span class="small de-emp">xp</span><%= h.earned_ep %>
+				<span class="small de-emp">atk</span><%= sprintf("%+d",h.offense_mod) %>
+				<span class="small de-emp">def</span><%= sprintf("%+d",h.defense_mod) %>
+			</div>
+		<% end %>
+		<br clear="all" />
+		
+
+		<table><tr><td colspan=3><h1>Engaged Foes</h1></td></tr>
+	<% @game.engaged_foes.each do |f| %>
+			 <tr><td><%= f.creature.challenge_rating %></td><td><%= link_to f.name_with_type, creature_url(f.creature_id) %> 
+			<%= hstatus(f.hstatus)%></td>
+			<td><%= sprintf("%+d",f.offense_mod) %></td><td>/</td><td><%= sprintf("%+d",f.defense_mod) %></td></tr>
+		<% end %>
+		<tr><td colspan=3><h1>Observing Foes</h1></td></tr>
+		<% @game.observing_foes.each do |f| %>
+			 <tr><td><%= f.creature.challenge_rating %></td><td><%= link_to f.name_with_type, creature_url(f.creature_id) %>
+				<%= hstatus(f.hstatus)%></td>
+			<td><%= sprintf("%+d",f.offense_mod) %></td><td>/</td><td><%= sprintf("%+d",f.defense_mod) %></td></tr>
+		<% end %></table>
+	</div>
+<% else %>
+
+	<% if session[:user] %>
+		<% if current_user.active_heros.count > 0 %>
+		<div id="hall-of-fame">
+			<h1>Active Heroes</h1>
+			<% if current_user.active_heros.any? %>
+			<% current_user.active_heros.each do |h| %>
+			<div class="hero">
+				<%= link_to h.name_with_title, h %> 
+				<span class="small de-emp"><%= hstatus(h.hstatus)%> <%= h.energy %></span><br />
+				<span class="small de-emp">rank</span><%= h.rank %>
+				<span class="small de-emp">xp</span><%= h.earned_ep %>
+				<span class="small de-emp">atk</span><%= sprintf("%+d",h.offense_mod) %>
+				<span class="small de-emp">def</span><%= sprintf("%+d",h.defense_mod) %>
+			</div>
+			<% end %>
+			<% end %>
+		</div>
+		<% end %>
+		<% if current_user.dead_heros.count > 0 %>
+		<div id="hall-of-fame">
+			<h1>Hall of Fame (deceased)</h1>
+			<% current_user.dead_heros.each do |h| %>
+			<div class="hero">
+				<%= link_to h.name_with_title, h %> 
+				<span class="small de-emp"><%= hstatus(h.hstatus)%> <%= h.energy %></span><br />
+				<span class="small de-emp">rank</span><%= h.rank %>
+				<span class="small de-emp">xp</span><%= h.earned_ep %>
+				<span class="small de-emp">atk</span><%= sprintf("%+d",h.offense_mod) %>
+				<span class="small de-emp">def</span><%= sprintf("%+d",h.defense_mod) %>
+			</div>
+			<% end %>
+		</div>
+		<% end %>
+	<% end %>
+<% end %>
+
+</body></html>

@@ -1,0 +1,18 @@
+
+production:
+  adapter: mysql
+  database: tdg_production
+  username: root
+  password:
+
+development:
+  adapter: mysql
+  database: tdg_development
+  username: root
+  password:
+
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+  timeout: 5000
+  

@@ -1,0 +1,54 @@
+		<% if @dead_heros %>
+<div id="heros">
+		<h1>Hall of Fame</h1>
+			<center> ~~ deceased ~~</center>
+		<% @dead_heros.each do |h| %>
+		<table>
+			<tr>
+				<td>(<%= h.rank %>)</td>
+				<td><%= link_to h.name_with_title, h %></td>
+				<td class="de-emp"><%= h.user.login %></td>
+			</tr>
+		</table>
+		<% end -%>
+</div>
+		<% end -%>
+		<% if @active_heros %>
+<div id="heros">
+		<h1>Top heroes</h1>
+		<table>
+		<% @active_heros.each do |h| %>
+			<tr>
+				<td>(<%= h.rank %>)</td>
+				<td><%= link_to h.name_with_title, h %></td>
+				<td><%= sprintf("%+d",h.offense_mod) %></td><td>/</td><td><%= sprintf("%+d",h.defense_mod) %></td>
+				<td class="de-emp"><%= h.user.login %></td>
+			</tr>
+		<% end -%>
+		</table>
+</div>
+		<% end -%>
+
+<% form_tag :controller => 'sessions', :action => 'create' do -%>
+<p><label for="login">Login</label><br/>
+<%= text_field_tag 'login' %></p>
+
+<p><label for="password">Password</label><br/>
+<%= password_field_tag 'password' %></p>
+
+<p><label for="remember_me">Remember me:</label>
+<%= check_box_tag 'remember_me' %></p>
+
+<p>
+	or use...
+</p>
+
+<p><label for="openid_url">OpenID URL</label><br />
+	<%= text_field_tag 'openid_url' %>
+</p>
+		
+<p><%= submit_tag 'Log in', :disable_with => "Connecting..." %></p>
+<% end -%>
+
+<%= link_to 'signup', signup_url %>
+

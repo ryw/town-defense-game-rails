@@ -1,0 +1,39 @@
+<h1><%= @hero.name_with_title %></h1>
+<table border=1 cellpadding=5>
+	<tr>
+		<td>Rank</td>
+		<td><%= @hero.rank %></td>
+	</tr>
+	<tr>
+		<td>Games</td>
+		<td><%= @hero.games %></td>
+	</tr>
+	<tr>
+		<td>Attributes</td>
+		<td>Strength: <%= @hero.strength.to_ladder %><br />
+			Dexterity: <%= @hero.dexterity.to_ladder %><br />
+			Constitution: <%= @hero.constitution.to_ladder %><br />
+			Intelligence: <%= @hero.intelligence.to_ladder %><br /></td>
+	</tr>
+	<tr>
+		<td>Experience (Unspent/Earned)</td>
+		<td><%= @hero.unspent_ep %>/<%= @hero.earned_ep %></td>
+	</tr>
+	<tr>
+		<td>Attack</td>
+		<td><%= @hero.offense_mod %></td>
+	</tr>
+	<tr>
+		<td>Defense</td>
+		<td><%= @hero.defense_mod %></td>
+	</tr>
+	<tr>
+		<td>Skills</td>
+		<td><%= @hero.skills_list %></td>
+	</tr>
+	<tr>
+		<td>Equipment</td>
+		<td><%= @hero.eq %></td>
+	</tr>
+</table>
+<p><%= link_to 'back', session[:game] ? game_path(session[:game]) : games_path %></p>

@@ -1,0 +1,14 @@
+<h1>Battle Results</h1>
+<% if @result == :success %>
+	<p>The battle continues:<p>
+	<p><%= @message %></p>
+	<% content_for :next_action do %>
+		<%= button_to 'next >', next_stage_game_url(@game) %>
+	<% end %>
+<% else %>
+	<p>GAME OVER.</p>
+	<p><%= @message %></p>
+	<% content_for :next_action do %>
+		<%= button_to 'start over', @game, :method => :delete %>
+	<% end %>
+<% end %>

@@ -1,0 +1,9 @@
+<% content_for :next_action do %>
+	<%= button_to 'next >', next_stage_game_url(@game) %>
+<% end %>
+
+<h1>Creature withdrawal</h1>
+
+<% @engaged_foes.each do |f| %>
+<%= f.name_with_type %> refuses to leave the battlefield.<br />
+<% end %>

@@ -1,0 +1,223 @@
+starter_wand:
+  evolves_to: wand
+  name: Starter Wand
+  location: right hand
+  offense_skill: wands
+  cost: 30
+
+wand:
+  evolves_to: wand_of_missiles
+  devolves_to: starter_wand
+  name: Wand
+  location: right hand
+  offense_skill: wands
+  cost: 60
+
+wand_of_missiles:
+  evolves_to: wand_of_destruction
+  devolves_to: wand
+  name: Wand of Missiles
+  location: right hand
+  offense_skill: wands
+  cost: 110
+
+wand_of_destruction:
+  devolves_to: wand_of_missiles
+  name: Wand of Destruction
+  location: right hand
+  offense_skill: wands
+  cost: 170
+
+spear:
+  evolves_to: spear_of_sharpness
+  name: Spear
+  location: right hand
+  offense_skill: pole_arms
+  cost: 30
+
+spear_of_sharpness:
+  evolves_to: golden_spear_of_striking
+  devolves_to: spear
+  name: Spear of Sharpness
+  location: right hand
+  offense_skill: pole_arms
+  cost: 90
+
+golden_spear_of_striking:
+  devolves_to: spear_of_sharpness
+  name: Golden Spear of Striking
+  location: right hand
+  offense_skill: pole_arms
+  cost: 150
+
+worn_out_short_sword:
+  evolves_to: short_sword
+  name: Worn-Out Short Sword
+  location: right hand
+  offense_skill: short_swords
+  cost: 10
+
+short_sword:
+  evolves_to: short_sword_of_sharpness
+  devolves_to: worn_out_short_sword
+  name: Short Sword
+  location: right hand
+  offense_skill: short_swords
+  cost: 20
+
+short_sword_of_sharpness:
+  devolves_to: short_sword
+  name: Short Sword of Sharpness
+  location: right hand
+  offense_skill: short_swords
+  cost: 100
+  
+worn_out_long_sword:
+  evolves_to: long_sword
+  name: Worn-Out Long Sword
+  location: right hand
+  offense_skill: long_swords
+  cost: 15
+  
+long_sword:
+  evolves_to: long_sword_of_sharpness
+  devolves_to: worn_out_long_sword
+  name: Long Sword
+  location: right hand
+  offense_skill: long_swords
+  cost: 50
+  
+long_sword_of_sharpness:
+  devolves_to: long_sword
+  name: Long Sword of Sharpness
+  location: right hand
+  offense_skill: long_swords
+  cost: 125
+  
+worn_out_great_sword:
+  evolves_to: great_sword
+  name: Worn-Out Great Sword
+  location: right hand
+  offense_skill: great_swords
+  cost: 30
+  
+great_sword:
+  evolves_to: great_sword_of_sharpness
+  devolves_to: worn_out_great_sword
+  name: Great Sword
+  location: right hand
+  offense_skill: great_swords
+  cost: 100
+  
+great_sword_of_sharpness:
+  devolves_to: great_sword
+  name: Great Sword of Sharpness
+  location: right hand
+  offense_skill: great_swords
+  cost: 225
+
+worn_out_medium_shield:
+  evolves_to: medium_shield
+  name: Worn-Out Medium Shield
+  location: left hand
+  defense_skill: shield
+  cost: 20 
+
+medium_shield:
+  evolves_to: premium_medium_shield
+  devolves_to: worn_out_medium_shield
+  name: Medium Shield
+  location: left hand
+  defense_skill: shield
+  cost: 50
+
+premium_medium_shield:
+  devolves_to: medium_shield
+  name: Premium Medium Shield
+  location: left hand
+  defense_skill: shield
+  cost: 125
+  
+amulet_of_animal_defense:
+  name: Amulet of Animal Defense
+  location: neck
+  cost: 200
+  
+short_bow:
+  name: Short Bow
+  location: right hand
+  offense_skill: archery
+  cost: 35
+  
+long_bow: 
+  name: Long Bow
+  location: right hand
+  offense_skill: archery
+  cost: 70
+
+great_bow: 
+  name: Great Bow
+  location: right hand
+  offense_skill: archery
+  cost: 120
+
+great_bow_of_wounding: 
+  name: Great Bow of Wounding
+  location: right hand
+  offense_skill: archery
+  cost: 160
+
+golden_great_bow_of_piercing: 
+  name: Golden Great Bow of Piercing
+  location: right hand
+  offense_skill: archery
+  cost: 220
+  
+dart:
+  name: Wooden Dart
+  location: right hand
+  offense_skill: thrown_weapons
+  cost: 30
+
+throwing_axe:
+  name: Throwing Axe
+  location: right hand
+  offense_skill: thrown_weapons
+  cost: 60
+
+javelin:
+  name: Javelin
+  location: right hand
+  offense_skill: thrown_weapons
+  cost: 90
+
+javelin_of_piercing:
+  name: Javelin of Piercing
+  location: right hand
+  offense_skill: thrown_weapons
+  cost: 140
+
+hatchet:
+  name: Hatchet
+  location: right hand
+  offense_skill: battle_axes
+  cost: 35
+
+double_axe:
+  name: Double Axe
+  location: right hand
+  offense_skill: battle_axes
+  cost: 75
+
+battle_axe:
+  name: Battle Axe
+  location: right hand
+  offense_skill: battle_axes
+  cost: 120
+
+silver_axe_of_striking:
+  name: Silver Axe of Striking
+  location: right hand
+  offense_skill: battle_axes
+  cost: 170
+  

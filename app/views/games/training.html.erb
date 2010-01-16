@@ -1,0 +1,52 @@
+<% content_for :next_action do %>
+	<%= button_to 'next >', next_stage_game_url(@game) %>
+<% end %>
+
+<h1>Training</h1>
+
+<% if @training_available -%>
+<p><%= @hero.name_with_title %></p>
+
+	<table border=1 cellpadding=5>
+		<tr>
+			<td>Skills</td>
+			<td><%= @hero.skills_list %></td>
+		</tr>
+		<tr>
+			<td>Equipment</td>
+			<td><%= @hero.eq %></td>
+		</tr>
+	</table>
+
+<p>Training points available: <%= @hero.unspent_ep %></p>
+<p><strong>Attributes:</strong></p>
+	<p>Strength: <%= @hero.strength.to_ladder %>  to
+		 	<%= (@hero.strength+1).to_ladder %> costs 
+			<%= @hero.strength.attribute_training_cost %>
+			<% if @hero.unspent_ep >= @hero.strength.attribute_training_cost %>
+				<%= link_to 'train', train_attribute_hero_url(:hero_id => @hero.id, 
+					:attribute => 'strength' ) %><% end %></p>
+					
+	<p>Dexterity: <%= @hero.dexterity.to_ladder %> to
+		 	<%= (@hero.dexterity+1).to_ladder %> costs 
+			<%= @hero.dexterity.attribute_training_cost %>
+			<% if @hero.unspent_ep >= @hero.dexterity.attribute_training_cost %>
+			<%= link_to 'train', train_attribute_hero_url(:hero_id => @hero.id, 
+					:attribute => 'dexterity' ) %><% end %></p>
+
+	<p>Constitution: <%= @hero.constitution.to_ladder %> to
+		 	<%= (@hero.constitution+1).to_ladder %> costs 
+			<%= @hero.constitution.attribute_training_cost %>
+			<% if @hero.unspent_ep >= @hero.constitution.attribute_training_cost %>
+			<%= link_to 'train', train_attribute_hero_url(:hero_id => @hero.id, 
+					:attribute => 'constitution' ) %><% end %></p>
+
+	<p>Intelligence: <%= @hero.intelligence.to_ladder %> to
+		 	<%= (@hero.intelligence+1).to_ladder %> costs 
+			<%= @hero.intelligence.attribute_training_cost %>
+			<% if @hero.unspent_ep >= @hero.intelligence.attribute_training_cost %>
+			<%= link_to 'train', train_attribute_hero_url(:hero_id => @hero.id, 
+					:attribute => 'intelligence' ) %><% end %></p>
+<% else -%>
+<p>No training today.</p>
+<% end -%>

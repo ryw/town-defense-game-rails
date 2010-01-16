@@ -1,0 +1,533 @@
+#humanoid
+kobold:
+  name:             Kobold
+  ctype:            humanoid 
+  gifts:            ambush
+  frequency:        1
+  tenacity:         -2
+  offense:          0
+  defense:          1
+  challenge_rating: 1
+  
+goblin:
+  name:             Goblin
+  ctype:            humanoid
+  frequency:        1
+  tenacity:         -1
+  offense:          1
+  defense:          1
+  challenge_rating: 1
+  
+pixie:
+  name:             Pixie
+  ctype:            humanoid
+  gifts:            suprise, magic -1
+  frequency:        2
+  tenacity:         0
+  offense:          0
+  defense:          2
+  challenge_rating: 1
+  
+orc:
+  name:             Orc
+  ctype:            humanoid
+  frequency:        1
+  tenacity:         0
+  offense:          3
+  defense:          2
+  challenge_rating: 2
+
+lizard_man:
+  name:             Lizard Man
+  ctype:            humanoid
+  frequency:        1
+  tenacity:         3
+  offense:          4
+  defense:          3
+  challenge_rating: 3
+  
+goblin lord:
+  name:             Goblin Lord
+  ctype:            humanoid
+  frequency:        2
+  tenacity:         -1
+  offense:          5
+  defense:          3
+  challenge_rating: 4
+
+bugbear:
+  name:             Bugbear
+  ctype:            humanoid
+  gifts:            suprise
+  frequency:        1
+  tenacity:         1
+  offense:          5
+  defense:          4
+  challenge_rating: 4
+
+owlbear:
+  name:             Owlbear
+  ctype:            humanoid
+  frequency:        2
+  tenacity:         0
+  offense:          6
+  defense:          2
+  challenge_rating: 4
+
+swamp_troll:
+  name:             Swamp Troll
+  ctype:            humanoid
+  frequency:        2
+  tenacity:         3
+  offense:          8
+  defense:          4
+  challenge_rating: 6
+
+minotaur:
+  name:             Minotaur
+  ctype:            humanoid
+  frequency:        2
+  tenacity:         2
+  offense:          6
+  defense:          6
+  challenge_rating: 6
+
+ogre:
+  name:             Ogre
+  ctype:            humanoid
+  frequency:        2
+  tenacity:         2
+  offense:          9
+  defense:          5
+  challenge_rating: 7
+
+cyclops:
+  name:             Cyclops
+  ctype:            humanoid
+  frequency:        3
+  tenacity:         2
+  offense:          8
+  defense:          6
+  challenge_rating: 7
+
+ogre_lord:
+  name:             Ogre Lord
+  ctype:            humanoid
+  frequency:        3
+  tenacity:         2
+  offense:          11
+  defense:          7
+  challenge_rating: 9
+
+yeti:
+  name:             Yeti
+  ctype:            humanoid
+  frequency:        3
+  tenacity:         2
+  offense:          9
+  defense:          11
+  challenge_rating: 10
+
+#monster
+imp:
+  name:             Imp
+  ctype:            monster
+  frequency:        1
+  tenacity:         0
+  offense:          0
+  defense:          2
+  challenge_rating: 1
+  
+cockatrice:
+  name:             Cockatrice
+  ctype:            monster
+  gifts:            petrify
+  frequency:        3
+  tenacity:         0
+  offense:          2
+  defense:          2
+  challenge_rating: 2
+
+lesser_demon:
+  name:             Lesser Demon
+  ctype:            monster
+  gifts:            magic 1
+  frequency:        3
+  tenacity:         0
+  offense:          8
+  defense:          8
+  challenge_rating: 8
+  
+greater_demon:
+  name:             Greater Demon
+  ctype:            monster
+  gifts:            magic 2
+  frequency:        3
+  tenacity:         0
+  offense:          11
+  defense:          11
+  challenge_rating: 11
+
+#demihuman
+dark_dwarf:
+  name:             Dark Dwarf
+  ctype:            demihuman 
+  frequency:        2
+  tenacity:         1
+  offense:          2
+  defense:          2
+  challenge_rating: 2
+
+dark_elf:
+  name:             Dark Elf
+  ctype:            demihuman 
+  gifts:            magic 0
+  frequency:        2
+  tenacity:         0
+  offense:          3
+  defense:          3
+  challenge_rating: 3
+
+dark_dwarven_battlemaster:
+  name:             Dark Dwarven Battlemaster
+  ctype:            demihuman 
+  frequency:        2
+  tenacity:         2
+  offense:          5
+  defense:          4
+  challenge_rating: 4
+
+dark_elf_weapon_master:
+  name:             Dark Elf Weapon Master
+  ctype:            demihuman 
+  frequency:        2
+  tenacity:         0
+  offense:          7
+  defense:          5
+  challenge_rating: 6
+
+dark_elf_lord:
+  name:             Dark Elf Lord
+  ctype:            demihuman 
+  gifts:            magic 1
+  frequency:        2
+  tenacity:         0
+  offense:          8
+  defense:          7
+  challenge_rating: 7
+
+dark_dwarven_king:
+  name:             Dark Dwarven King
+  ctype:            demihuman 
+  frequency:        3
+  tenacity:         3
+  offense:          9
+  defense:          7
+  challenge_rating: 8
+
+#animal
+giant_rat:
+  name:             Giant Rat
+  ctype:            animal
+  gifts:            disease
+  frequency:        1
+  tenacity:         -2
+  offense:          -2
+  defense:          -1
+  challenge_rating: 1
+
+mountain_lion:
+  name:             Mountain Lion
+  ctype:            animal
+  frequency:        1
+  tenacity:         -1
+  offense:          -1
+  defense:          0
+  challenge_rating: 1
+
+giant_bat:
+  name:             Giant Bat
+  ctype:            animal
+  frequency:        1
+  tenacity:         -2
+  offense:          -2
+  defense:          -1
+  challenge_rating: 1
+
+giant_python:
+  name:             Giant Python
+  ctype:            animal
+  frequency:        1
+  tenacity:         -2
+  offense:          1
+  defense:          -2
+  challenge_rating: 1
+
+rock_baboon:
+  name:             Rock Baboon
+  ctype:            animal
+  frequency:        1
+  tenacity:         0
+  offense:          2
+  defense:          2
+  challenge_rating: 2
+
+giant_weasel:
+  name:             Giant Weasel
+  ctype:            animal
+  gifts:            drain blood
+  frequency:        1
+  tenacity:         1
+  offense:          4
+  defense:          2
+  challenge_rating: 3
+
+wolf:
+  name:             Wolf
+  ctype:            animal
+  frequency:        1
+  tenacity:         1
+  offense:          2
+  defense:          5
+  challenge_rating: 3
+
+giant_boar:
+  name:             Giant Boar
+  ctype:            animal
+  gifts:            charge
+  frequency:        2
+  tenacity:         1
+  offense:          5
+  defense:          3
+  challenge_rating: 4
+
+giant_lizard:
+  name:             Giant Lizard
+  ctype:            animal
+  gifts:            charge
+  frequency:        2
+  tenacity:         1
+  offense:          4
+  defense:          6
+  challenge_rating: 5
+
+hell_hound:
+  name:             Hell Hound
+  ctype:            animal
+  frequency:        2
+  tenacity:         4
+  offense:          7
+  defense:          3
+  challenge_rating: 5
+  
+mountain_bear:
+  name:             Mountain Bear
+  ctype:            animal 
+  gifts:            hug
+  frequency:        2
+  tenacity:         0
+  offense:          10
+  defense:          7
+  challenge_rating: 8
+
+tyrannosaurus_rex:
+  name:             Tyrannosaurus Rex
+  ctype:            animal
+  gifts:            swallow whole 10
+  frequency:        3
+  tenacity:         3
+  offense:          13
+  defense:          11
+  challenge_rating: 12
+  
+#lowlife
+giant_centipede:
+  name:             Giant Centipede
+  ctype:            lowlife
+  frequency:        1
+  tenacity:         -2
+  offense:          -2
+  defense:          -2
+  challenge_rating: 1
+  
+giant_millipede:
+  name:             Giant Millipede
+  ctype:            lowlife
+  frequency:        1
+  tenacity:         -2
+  offense:          -1
+  defense:          -2
+  challenge_rating: 1
+  
+giant_spider:
+  name:             Giant Spider
+  ctype:            lowlife
+  frequency:        2
+  tenacity:         0
+  offense:          2
+  defense:          0
+  challenge_rating: 1
+  
+bee_swarm:
+  name:             Bee Swarm
+  ctype:            lowlife
+  frequency:        1
+  tenacity:         -2
+  offense:          2
+  defense:          -3
+  challenge_rating: 1
+  
+fire_beetle:
+  name:             Fire Beetle
+  ctype:            lowlife
+  frequency:        1
+  tenacity:         -2
+  offense:          3
+  defense:          1
+  challenge_rating: 2
+  
+giant_ant:
+  name:             Giant Ant
+  ctype:            lowlife
+  gifts:            beserk
+  frequency:        2
+  tenacity:         0
+  offense:          4
+  defense:          3
+  challenge_rating: 3
+
+giant_scorpion:
+  name:             Giant Scorpion
+  ctype:            lowlife
+  frequency:        2
+  tenacity:         0
+  offense:          5
+  defense:          3
+  challenge_rating: 4
+  
+giant_death_mantis:
+  name:             Giant Death Mantis
+  ctype:            lowlife
+  frequency:        3
+  tenacity:         0
+  offense:          9
+  defense:          7
+  challenge_rating: 8
+
+#dragon
+small_black_dragon:
+  name:             Small Black Dragon
+  ctype:            dragon
+  gifts:            acid breath, magic 1
+  frequency:        2
+  tenacity:         0
+  offense:          8
+  defense:          5
+  challenge_rating: 6
+  
+large_black_dragon:
+  name:             Large Black Dragon
+  ctype:            dragon
+  gifts:            acid breath, magic 1
+  frequency:        2
+  tenacity:         1
+  offense:          10
+  defense:          9
+  challenge_rating: 9
+
+huge_black_dragon:
+  name:             Huge Black Dragon
+  ctype:            dragon
+  gifts:            acid breath, magic 2
+  frequency:        3
+  tenacity:         2
+  offense:          13
+  defense:          12
+  challenge_rating: 12
+
+#undead
+ghoul:
+  name:             Ghoul
+  ctype:            undead
+  frequency:        1
+  tenacity:         1
+  offense:          0
+  defense:          2
+  challenge_rating: 1
+
+zombie:
+  name:             Zombie
+  ctype:            undead
+  gifts:            rise
+  frequency:        1
+  tenacity:         4
+  offense:          3
+  defense:          1
+  challenge_rating: 2
+
+skeleton:
+  name:             Skeleton
+  ctype:            undead
+  gifts:            rise
+  frequency:        1
+  tenacity:         4
+  offense:          3
+  defense:          2
+  challenge_rating: 2
+
+shadow:
+  name:             Shadow
+  ctype:            undead
+  frequency:        2
+  tenacity:         3
+  offense:          5
+  defense:          3
+  challenge_rating: 4
+    
+vampire:
+  name:             Vampire
+  ctype:            undead
+  gifts:            create vampire, summon animal
+  frequency:        2
+  tenacity:         3
+  offense:          4
+  defense:          5
+  challenge_rating: 4
+
+giant_skeleton:
+  name:             Giant Skeleton
+  ctype:            undead
+  gifts:            rise
+  frequency:        2
+  tenacity:         4
+  offense:          6
+  defense:          3
+  challenge_rating: 4
+
+ghost:
+  name:             Ghost
+  ctype:            undead
+  frequency:        2
+  tenacity:         3
+  offense:          5
+  defense:          5
+  challenge_rating: 5
+
+vampire_lord:
+  name:             Vampire Lord
+  ctype:            undead
+  gifts:            create vampire, summon animal
+  frequency:        3
+  tenacity:         3
+  offense:          6
+  defense:          6
+  challenge_rating: 6
+
+mummy:
+  name:             Mummy
+  ctype:            undead
+  frequency:        3
+  tenacity:         3
+  offense:          8
+  defense:          6
+  challenge_rating: 7
