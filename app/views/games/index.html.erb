@@ -1,15 +1,27 @@
-
 <table id="games-list">
-<% for game in @games %>
-  <tr><td><%=h game.name %></td><td>
-	round <%= game.round %>
-	</td><td>
-			<% if game.status == 1 %>
-				<%= link_to 'continue', game %>
-			<% else %>
-			  game over
-			<% end %>
-			</td><td><%= link_to 'delete', game, :confirm => 'Are you sure?', :method => :delete %></td></tr>
-<% end %>
-	<tr><td><%= link_to 'start game', new_game_path %></td></tr>
+  <% for game in @games %>
+    <tr>
+      <td>
+        <%=h game.name %>
+      </td>
+      <td>
+        round <%= game.round %>
+      </td>
+      <td>
+			  <% if game.status == 1 %>
+				  <%= link_to 'continue', game %>
+			  <% else %>
+			    game over
+			    <% end %>
+			</td>
+			<td>
+			  <%= link_to 'delete', game, :confirm => 'Are you sure?', :method => :delete %>
+			</td>
+		</tr>
+  <% end %>
+	<tr>
+	  <td>
+	    <%= link_to 'start game', new_game_path %>
+	  </td>
+	</tr>
 </table>

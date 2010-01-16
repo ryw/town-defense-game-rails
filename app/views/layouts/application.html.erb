@@ -27,7 +27,6 @@
   	<% end %>
   </div>
 
-<%= yield :next_action %>
 
 <div id="content">		
 	<% if flash[:notice] %>
@@ -37,7 +36,10 @@
 		<div id="flash-error"><%= flash[:error] %></div>
 	<% end %>
 	
-	<%= yield %>
+	<div id="action">
+    <%= yield :next_action %>
+	  <%= yield %>
+	</div>
 </div>
 
 <% if session[:game] %>
@@ -86,7 +88,7 @@
 
 	<% if session[:user] %>
 		<% if current_user.active_heros.count > 0 %>
-		<div id="hall-of-fame">
+		<div class="heros-full-list">
 			<h1>Active Heroes</h1>
 			<% if current_user.active_heros.any? %>
 			<% current_user.active_heros.each do |h| %>
@@ -103,7 +105,7 @@
 		</div>
 		<% end %>
 		<% if current_user.dead_heros.count > 0 %>
-		<div id="hall-of-fame">
+		<div class="heros-full-list">
 			<h1>Hall of Fame (deceased)</h1>
 			<% current_user.dead_heros.each do |h| %>
 			<div class="hero">

@@ -40,9 +40,11 @@ a {
 }
 .heros-list {
 	margin: 10px; 
-	padding: 5px; 
+	padding: 10px; 
 	border: 1px solid #ACA;
 	width:400px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
 }
 .heros-list ul {
 	list-style:none;
@@ -60,6 +62,8 @@ a {
 	background-color: #CFC; 
 	border: 1px solid #ACA;
 	padding:10px 20px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
 }
 
 h1 {
@@ -122,11 +126,10 @@ h1 {
 	color: #393; 
 }
 
-#heros { 
-	margin: 10px; 
-	padding: 5px; 
-	border: 1px solid #999; 
-	width: 470px;
+.heros-full-list { 
+	clear:both;
+	margin-top:20px; 
+	padding: 10px; 
 }
 
 .hero {
@@ -134,6 +137,23 @@ h1 {
 	width:210px; 
 	border: 1px solid #999; 
 	margin: 5px; 
-	padding: 5px; 
+	padding: 6px; 
 	font-size:80%;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+}
+
+#game {
+	float:right;
+}
+
+#heros {
+	padding:20px;
+}
+
+#action {
+	padding:20px;
+	border: 1px solid #ACA;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
 }
