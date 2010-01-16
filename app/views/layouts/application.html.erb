@@ -36,10 +36,15 @@
 		<div id="flash-error"><%= flash[:error] %></div>
 	<% end %>
 	
+<% if session[:game] %>
 	<div id="action">
     <%= yield :next_action %>
 	  <%= yield %>
 	</div>
+<% else %>
+	  <%= yield %>
+<% end %>
+
 </div>
 
 <% if session[:game] %>
