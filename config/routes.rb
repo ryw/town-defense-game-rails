@@ -29,6 +29,6 @@ ActionController::Routing::Routes.draw do |map|
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
 
-  map.connect '', :controller => 'games', :action => 'index'
+  map.root :controller => 'games'
 
 end
