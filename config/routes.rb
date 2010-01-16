@@ -28,7 +28,7 @@ ActionController::Routing::Routes.draw do |map|
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
-  map.activate '/activate', :controller => 'users', :action => 'activate'
+  map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
 
   map.root :controller => 'games'
 
