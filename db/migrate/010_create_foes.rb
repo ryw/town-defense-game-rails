@@ -2,7 +2,7 @@ class CreateFoes < ActiveRecord::Migration
   def self.up
     create_table :foes do |t|
       t.integer   :game_id
-      t.string    :creature_id
+      t.integer   :creature_id
       t.string    :name
       t.integer   :hstatus        #health status
       t.integer   :estatus        #engaged status
