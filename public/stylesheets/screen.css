@@ -1,35 +1,33 @@
-body { 
-	padding: 0px; 
-	margin: 0px; 
+body {
+	padding: 0px;
+	margin: 0px;
 	font: 80% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 }
 
 a {
 	color:#262;
 }
-#header { 
-	border-bottom: 1px solid #ACA; 
-	padding: 20px; 
-	background-color: #CFC; 
-	margin: 0px; 
-	margin-bottom: 10px; 
+#header {
+	border-bottom: 1px solid #ACA;
+	padding: 20px;
+	background-color: #CFC;
+	margin: 0px;
+	margin-bottom: 10px;
 }
 
-
-
-#flash-notice { 
-	padding: 10px; 
-	border: 1px solid #999; 
-	margin-bottom: 15px; 
+#flash-notice {
+	padding: 10px;
+	border: 1px solid #999;
+	margin-bottom: 15px;
 }
 
-#flash-error { 
-	padding: 10px; 
-	border: 1px solid #999; 
-	margin-bottom: 15px; 
+#flash-error {
+	padding: 10px;
+	border: 1px solid #999;
+	margin-bottom: 15px;
 }
 
-#content { 
+#content {
 	padding: 10px;
 }
 
@@ -39,8 +37,8 @@ a {
 	margin:0 20px;
 }
 .heros-list {
-	margin: 10px; 
-	padding: 10px; 
+	margin: 10px;
+	padding: 10px;
 	border: 1px solid #ACA;
 	width:400px;
 	-webkit-border-radius: 6px;
@@ -55,11 +53,11 @@ a {
 	color:#8B8;
 }
 
-#login-area { 
+#login-area {
 	float:left;
 }
 #login-area #signup {
-	background-color: #CFC; 
+	background-color: #CFC;
 	border: 1px solid #ACA;
 	padding:10px 20px;
 	-webkit-border-radius: 6px;
@@ -70,13 +68,13 @@ h1 {
 	font-size: 120%;
 }
 
-#games-list td { 
-	padding: 4px; 
+#games-list td {
+	padding: 4px;
 }
 
-#shopping td { 
-	padding: 5px; 
-	border: 1px solid #999; 
+#shopping td {
+	padding: 5px;
+	border: 1px solid #999;
 }
 
 .small {
@@ -87,60 +85,61 @@ h1 {
 	color: #888;
 }
 
-.rolldata, .smallde-emp { 
-	font-size: 80%; 
+.rolldata, .smallde-emp {
+	font-size: 80%;
 	color: #888;
 }
 
-.price { 
+.price {
 	font-size: 200%;
 }
 
-.levelup, .bigbold { 
-	font-size: 120%; 
-	font-weight: bold; 
+.levelup, .bigbold {
+	font-size: 120%;
+	font-weight: bold;
 }
 
-.goodnews { 
-	font-size: 140%; 
-	font-weight: bold; 
-	color: #393; 
+.goodnews {
+	font-size: 140%;
+	font-weight: bold;
+	color: #393;
 }
 
-.badnews { 
-	font-size: 140%; 
-	font-weight: bold; 
-	color: #933; 
+.badnews {
+	font-size: 140%;
+	font-weight: bold;
+	color: #933;
 }
 
 .rollX {
 	font-size: 80%;
-	color: #933; 
+	color: #933;
 }
 .roll- {
-	font-size: 80%; 
-	color: #666; 
+	font-size: 80%;
+	color: #666;
 }
 .rollO {
-	font-size: 80%; 
-	color: #393; 
+	font-size: 80%;
+	color: #393;
 }
 
-.heros-full-list { 
+.heros-full-list {
 	clear:both;
-	margin-top:20px; 
-	padding: 10px; 
+	margin-top:20px;
+	padding: 10px;
 }
 
 .hero {
-	float: left; 
-	width:210px; 
-	border: 1px solid #999; 
-	margin: 5px; 
-	padding: 6px; 
+	float: left;
+	background: #e8e8e8;
+	width:160px;
+	margin: 4px;
+	line-height: 1.4em;
+	padding: 6px;
 	font-size:80%;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 }
 
 #game {
@@ -152,7 +151,7 @@ h1 {
 }
 
 #action {
-	padding:20px;
+	padding:20px 20px 0px;
 	border: 1px solid #ACA;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;

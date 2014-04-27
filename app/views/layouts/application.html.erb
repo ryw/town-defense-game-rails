@@ -12,30 +12,28 @@
   <div id="header">
   	<% if session[:game] %>
   		<div id="game">
-    		game: <b><%=h @game.name %></b> | 
-    		round: <b><%=h @game.round %></b> |
-    		gold: <b><%=h @game.gold %></b> |
-  			stage: <b><%=h Game::STAGES[@game.stage] %></b> |
-  			<%= link_to 'quit', @game, :confirm => 'Are you sure?', :method => :delete %>
+    		round: <b><%=h @game.round %></b>
+    		gold: <b><%=h @game.gold %></b>
+  			<%= link_to 'run', @game, :confirm => 'Are you sure?', :method => :delete %>
   		</div>
-  	<% end %>	
+  	<% end %>
 
-  	<b>town defense game</b>
+  	<b>TDG</b>
 
   	<% if logged_in? %>
-  		| logged in as <%= User.find(current_user).login %> | <%= link_to 'logout', logout_url %>
+  		<%= User.find(current_user).login %> <%= link_to 'logout', logout_url %>
   	<% end %>
   </div>
 
 
-<div id="content">		
+<div id="content">
 	<% if flash[:notice] %>
 		<div id="flash-notice"><%= flash[:notice] %></div>
 	<% end %>
 	<% if flash[:error] %>
 		<div id="flash-error"><%= flash[:error] %></div>
 	<% end %>
-	
+
 <% if session[:game] %>
 	<div id="action">
     <%= yield :next_action %>
@@ -52,7 +50,7 @@
 		<h1>Engaged Heros</h1>
 		<% @game.engaged_heros.each do |h| %>
 			<div class="hero">
-				<%= link_to h.name_with_title, h %> 
+				<%= link_to h.name_with_title, h %><br />
 				<span class="small de-emp"><%= hstatus(h.hstatus)%> <%= h.energy %></span><br />
 				<span class="small de-emp">rank</span><%= h.rank %>
 				<span class="small de-emp">xp</span><%= h.earned_ep %>
@@ -65,7 +63,7 @@
 		<h1>Observing Heros</h1>
 		<% @game.observing_heros.each do |h| %>
 			<div class="hero">
-				<%= link_to h.name_with_title, h %> 
+				<%= link_to h.name_with_title, h %><br />
 				<span class="small de-emp"><%= hstatus(h.hstatus)%> <%= h.energy %></span><br />
 				<span class="small de-emp">rank</span><%= h.rank %>
 				<span class="small de-emp">xp</span><%= h.earned_ep %>
@@ -74,11 +72,11 @@
 			</div>
 		<% end %>
 		<br clear="all" />
-		
+
 
 		<table><tr><td colspan=3><h1>Engaged Foes</h1></td></tr>
 	<% @game.engaged_foes.each do |f| %>
-			 <tr><td><%= f.creature.challenge_rating %></td><td><%= link_to f.name_with_type, creature_url(f.creature_id) %> 
+			 <tr><td><%= f.creature.challenge_rating %></td><td><%= link_to f.name_with_type, creature_url(f.creature_id) %>
 			<%= hstatus(f.hstatus)%></td>
 			<td><%= sprintf("%+d",f.offense_mod) %></td><td>/</td><td><%= sprintf("%+d",f.defense_mod) %></td></tr>
 		<% end %>
@@ -98,8 +96,7 @@
 			<% if current_user.active_heros.any? %>
 			<% current_user.active_heros.each do |h| %>
 			<div class="hero">
-				<%= link_to h.name_with_title, h %> 
-				<span class="small de-emp"><%= hstatus(h.hstatus)%> <%= h.energy %></span><br />
+				<%= link_to h.name_with_title, h %><br />
 				<span class="small de-emp">rank</span><%= h.rank %>
 				<span class="small de-emp">xp</span><%= h.earned_ep %>
 				<span class="small de-emp">atk</span><%= sprintf("%+d",h.offense_mod) %>
@@ -114,7 +111,7 @@
 			<h1>Hall of Fame (deceased)</h1>
 			<% current_user.dead_heros.each do |h| %>
 			<div class="hero">
-				<%= link_to h.name_with_title, h %> 
+				<%= link_to h.name_with_title, h %>
 				<span class="small de-emp"><%= hstatus(h.hstatus)%> <%= h.energy %></span><br />
 				<span class="small de-emp">rank</span><%= h.rank %>
 				<span class="small de-emp">xp</span><%= h.earned_ep %>

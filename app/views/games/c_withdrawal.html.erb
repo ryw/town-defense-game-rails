@@ -4,6 +4,8 @@
 
 <h1>Creature withdrawal</h1>
 
-<% @engaged_foes.each do |f| %>
-<%= f.name_with_type %> refuses to leave the battlefield.<br />
-<% end %>
+<p>
+	<% @engaged_foes.each do |f| %>
+	<%= f.name_with_type %> refuses to leave the battlefield.<br />
+	<% end %>
+</p>

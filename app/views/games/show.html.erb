@@ -1,9 +1,11 @@
-<h1>Name your starting hero</h1>	
+<h1>Name your starting hero</h1>
 <% form_for :hero, :url => heros_url do |f| -%>
-	<p>Name: <%= f.text_field "name", :value => @gen_name %> 
+	<p>Name: <%= f.text_field "name", :value => @gen_name %>
 	<%= f.submit "save" %></p>
 	<% if current_user.active_heros.any? %>
-	<%= link_to("skip hero creation", h_attract_game_url) if 
-	  current_user.active_heros.average(:rank) < 3.0 && current_user.active_heros.count > 4 %>
-	<% end %>
+	<p>
+		<%= link_to("skip hero creation", h_attract_game_url) if
+		  current_user.active_heros.average(:rank) < 3.0 && current_user.active_heros.count > 4 %>
+		<% end %>
+	</p>
 <% end -%>

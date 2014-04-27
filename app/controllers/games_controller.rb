@@ -11,7 +11,7 @@ class GamesController < ApplicationController
   def show
     session[:game] = @game.id
     case @game.stage
-      when 0: redirect_to h_attract_game_url(@game) if @game.round > 1 
+      when 0: redirect_to h_attract_game_url(@game) if @game.round > 1
       when 1: redirect_to h_add_game_url(@game)
       when 2: redirect_to h_withdrawal_game_url(@game)
       when 3: redirect_to shopping_game_url(@game)
@@ -20,7 +20,7 @@ class GamesController < ApplicationController
       when 6: redirect_to c_add_game_url(@game)
       when 7: redirect_to c_withdrawal_game_url(@game)
       when 8: redirect_to battle_game_url(@game)
-    end    
+    end
     @gen_name = name_generate
   end
 
@@ -40,10 +40,10 @@ class GamesController < ApplicationController
     @game.destroy
     redirect_to games_url
   end
-  
+
   def scouting
   end
-  
+
   def defense_setup
   end
 
@@ -54,7 +54,7 @@ class GamesController < ApplicationController
   def h_add
     @message = @game.h_add
   end
-  
+
   def h_withdrawal
     @engaged_heros = @game.engaged_heros
   end
@@ -64,17 +64,17 @@ class GamesController < ApplicationController
     @items = Item.costs_under(@game.gold)
     @items = @items - @hero.items
   end
-  
+
   def training
     flash[:notice] = params[:message] if params[:message]
     @game.engaged_heros.find(:all, :conditions => 'unspent_ep > 0').each do |h|
       if h.training_available?
-        @hero = h 
+        @hero = h
         @training_available = true
       end
     end
   end
-  
+
   def c_attract
     @message = @game.c_attract
   end
@@ -87,8 +87,8 @@ class GamesController < ApplicationController
       if chance > 40 or (@game.engaged_heros.count - @game.engaged_foes.count > 2) or @game.engaged_foes.count == 0
         candidate.estatus = 1
         candidate.save
-        @message += "#{candidate.name_with_type} has joined the fray! " 
-        @message += "<span class=\"rolldata\">#{chance} vs. 33</span><br />" 
+        @message += "<p>#{candidate.name_with_type} has joined the fray! "
+        @message += "<span class=\"rolldata\">#{chance} vs. 33</span></p>" 
       end
       @game.reload
     else
@@ -108,8 +108,8 @@ class GamesController < ApplicationController
       @message += h.energy_loss([5-h.constitution,1].max)
       if h.hstatus < 4 and @game.engaged_foes.count > 0 then
         #hero will attack some random foe
-        f = @game.engaged_foes.random                                 
-        if f.hstatus == 4 then                                         
+        f = @game.engaged_foes.random
+        if f.hstatus == 4 then
           #if foe is incapicated, instant death
           @message += "#{h.name_with_title} slays the hapless #{f.name_with_type}.<br />"
           @game.engaged_foes.delete(f)
@@ -129,7 +129,7 @@ class GamesController < ApplicationController
               when 3..4: f.wound(2)
               when 5..6: f.wound(3)
               when 7..8: f.wound(4)
-              else 
+              else
                 @game.engaged_foes.delete(f)
                 f.die
                 @message += h.gain_experience(f.creature.challenge_rating)
@@ -144,10 +144,10 @@ class GamesController < ApplicationController
     @game.engaged_foes.each do |f|
       if f.hstatus < 4 then
         #foe will attack some random hero
-        h = @game.engaged_heros.random       
+        h = @game.engaged_heros.random
         if h then
           @message += h.energy_loss([3-h.constitution,0].max)
-          if h.hstatus == 4 then                                         
+          if h.hstatus == 4 then
             #if hero is incapicated, instant deeath
             @message += "#{f.name_with_type} slays the hapless #{h.name_with_title}.<br />"
             @message << h.die
@@ -171,29 +171,29 @@ class GamesController < ApplicationController
           end
         end
       end
-    end 
+    end
     #observing heros
     @game.observing_heros.each do |h|
       h.energy_gain([3,h.constitution+2].min)
     end
-    @result = :success if @game.engaged_heros.count > 0 
+    @result = :success if @game.engaged_heros.count > 0
   end
-  
+
   def find_game
     @game = Game.find(params[:id])
   end
-  
+
   def next_stage
     @game.update_attribute(:stage, @game.stage+1)
     if @game.stage == 9
-      @game.update_attribute(:round, @game.round+1)    
+      @game.update_attribute(:round, @game.round+1)
       @game.update_attribute(:stage, 0)
     end
     redirect_to @game
   end
-  
+
   private
-  
+
   def roll_result(num)
     char = case num
       when -1000..1: "X"
