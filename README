@@ -1,6 +1,1 @@
-1. need to update /vendor/plugins/open_id_authentication/init.rb line from:
-  config.gem 'rack-openid', :lib => 'rack/openid', :version => '=>0.2.1'
-to 
-  config.gem 'rack-openid', :lib => 'rack/openid', :version => '>=0.2.1'
-
-2. then need to run rake db:fixtures:load to get the seed data
+need to run rake db:fixtures:load to get the seed data
