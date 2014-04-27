@@ -1,14 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
-  
+
   map.resources :games, :member => {
     :h_attract => :get,
-    :h_add => :get, 
-    :h_withdrawal => :get, 
-    :c_attract => :get, 
-    :c_add => :get, 
+    :h_add => :get,
+    :h_withdrawal => :get,
+    :c_attract => :get,
+    :c_add => :get,
     :c_withdrawal => :get,
-    :battle => :get, 
-    :shopping => :get, 
+    :battle => :get,
+    :shopping => :get,
     :training  => :get,
     :next_stage => :post }
 
@@ -28,7 +28,6 @@ ActionController::Routing::Routes.draw do |map|
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
-  map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
 
   map.root :controller => 'games'
 

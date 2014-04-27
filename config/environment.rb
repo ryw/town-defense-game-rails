@@ -1,6 +1,6 @@
 # Be sure to restart your web server when you modify this file.
 
-# Uncomment below to force Rails into production mode when 
+# Uncomment below to force Rails into production mode when
 # you don't control web/app server and can't set it the proper way
 # ENV['RAILS_ENV'] ||= 'production'
 
@@ -13,7 +13,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here
   config.action_controller.session = { :session_key => "_myapp_session", :secret => "booyah! booyah! booyah! booyah!" }
-  
+
   config.time_zone = 'Eastern Time (US & Canada)'
 
   config.action_mailer.delivery_method = :smtp
@@ -24,13 +24,11 @@ Rails::Initializer.run do |config|
     :user_name => "",
     :password => "",
     :authentication => :login
-  }    
-  
-  config.active_record.observers = :user_observer
+  }
 
 end
 
-# Add new inflection rules using the following format 
+# Add new inflection rules using the following format
 # (all these examples are active by default):
 # Inflector.inflections do |inflect|
 #   inflect.plural /^(ox)$/i, '\1en'
