@@ -4,14 +4,19 @@
 
 <h1>Shopping</h1>
 
-<% @game.engaged_heros.each do |h| %>
+<p><% @game.engaged_heros.each do |h| %>
 <%= link_to h.name, shopping_game_url(:hero_id => h.id ) %>
-<% end %>
+<% end %></p>
 
 <% unless @items.size.zero? -%>
-	<h2><%= @hero.name_with_title %></h2>
 
-	<table border=1 cellpadding=5>
+	<table border=1 cellpadding=5 style="margin-bottom: 10px;">
+		<tr>
+			<td colspan=2>
+				<b><%= @hero.name_with_title %></b>
+			</td>
+		</tr>
+
 		<tr>
 			<td>Attributes</td>
 			<td>Strength: <%= @hero.strength.to_ladder %><br />
@@ -49,7 +54,7 @@
 								<% end -%>
 					<% end -%>
 			</td>
-			<td><%= link_to 'buy', buy_item_hero_url(:hero_id => @hero.id, 
+			<td><%= link_to 'buy', buy_item_hero_url(:hero_id => @hero.id,
 						:item_id => i.id ) %></td>
 		</tr>
 	<% end -%>
